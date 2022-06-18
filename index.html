@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Quiz</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <div id="score" class="high-score-row">
+            <p>View high scores</p>
+        </div>
+        <div id="timer">
+            Time: <span id="time">00:00</span>
+        </div>
+    </header>
+    <!-- Rules section -->
+    <main class="page-content" id="page-content">
+        <section class="code-quiz-wrapper">
+            <h1 class="quiz-title">Coding Quiz Challenge</h1>
+            <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect
+                answers will penalize your score / time by ten seconds!</p>
+            <button id="start-quiz" class="btn">Start Quiz</button>
+        </section>
+
+        <!-- Quiz starting section -->
+        <section class="quiz-section" id="quiz-section">
+            <h1 id="questions-title"></h1>
+            <ul id="answer-list"></ul>
+        </section> 
+
+        <!-- End of quiz section -->
+        <section class="quiz-score" id="final-score"></section>
+
+        <!-- Score section -->
+        <section class="score" id="score-section"></section>
+
+    </main>
+    <script src="./assets/js/script.js"></script>
+    <footer>
+        <p>&copy;2022 by Kenneth Asay 🔥🌌🌳🦝 </p>
+    </footer>
+</body>
+
+</html>
