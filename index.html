@@ -15,29 +15,38 @@
             <p>View high scores</p>
         </div>
         <div id="timer">
-            Time: <span id="time">00:00</span>
+            <p>Time: </p>
         </div>
     </header>
     <!-- Rules section -->
     <main class="page-content" id="page-content">
-        <section class="code-quiz-wrapper">
-            <h1 class="quiz-title">Coding Quiz Challenge</h1>
+        <section class="code-quiz-wrapper" style="display: block;">
+            <h1 id="container" class="quiz-title">Coding Quiz Challenge</h1>
             <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect
                 answers will penalize your score / time by ten seconds!</p>
             <button id="start-quiz" class="btn">Start Quiz</button>
         </section>
 
         <!-- Quiz starting section -->
-        <section class="quiz-section" id="quiz-section">
-            <h1 id="questions-title"></h1>
+        <section class="quiz-section" id="quiz-section" style="display: none;">
+            <h1 id="question-title" class="quest-title"></h1>
             <ul id="answer-list"></ul>
         </section> 
 
         <!-- End of quiz section -->
-        <section class="quiz-score" id="final-score"></section>
+        <section class="quiz-score" id="final-score" style="display: none;">
+            <h1>All done!</h1>
+            <div class="current-score">
+                <p>Your final score is: </p>
+            </div>
+            <button id="back-btn" class="btn">Go back</button>
+            <button id="submit-btn" class="btn">Submit</button>
+        </section>
 
         <!-- Score section -->
-        <section class="score" id="score-section"></section>
+        <section class="score" id="score-section" style="display: none;">
+        <button id="clear-btn" class="btn">Clear your scores</button>
+        </section>
 
     </main>
     <script src="./assets/js/script.js"></script>
@@ -47,3 +56,10 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
