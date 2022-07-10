@@ -6,7 +6,7 @@ var timeLeft = 75;
 var timerEl = document.getElementById("timer");
 var questionEl = document.getElementById("question-title");
 var displayAnswers = document.getElementById("answer-list")
-var questTitle = document.getElementById(".quest-title");
+var questTitle = document.getElementById(".question-title");
 
 
 var buttonEl = {
@@ -83,23 +83,25 @@ var countdown = function() {
 }
 
 
-var displayQuiz = function() {
+
+
+// Create a new task
+buttonEl.startEl.addEventListener("click", function displayQuiz() {
   // get the quiz
   var quizSection = document.getElementById("quiz-section");
+  var mainContent =document.getElementById('intro')
   // get the value of the quiz display property
   var displaySetting = quizSection.style.display;
+  var displayIntro = mainContent.style.display;
   // now toggle the quiz when the button is clicked, depending on current state
-  if (displaySetting == "none") {
+  if (displaySetting == "none" && displayIntro == "block") {
     // quiz is not visible then show it
     quizSection.style.display = "block";
+    mainContent.style.display = "none";
+
   }else {
     // quiz is visible then hide it
     quizSection.style.display = "none";
   }
-  console.log(displayQuiz);
-}
-
-
-
-// Create a new task
-buttonEl.startEl.addEventListener("click", countdown);
+  countdown();
+});
